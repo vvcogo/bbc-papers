@@ -1,4 +1,4 @@
-\section{Architecture}
+\section{BiobankCloud Architecture}
 
  \begin{figure}[h]
  \centering
@@ -12,7 +12,7 @@ Our platform has a layered architecture (see Figure \ref{fig:arch}). In a typica
 
 \subsection*{Data Sets for Hadoop}
 
-The web interface has integrated a LIMS to manage the typical data items inside a biobank, and to provide fine-grained access control to these items. These items are also reflected in the Hadoop installation. Specifically, 
+The web interface has integrated a LIMS to manage the typical data items inside a biobank, and to provide fine-grained access control to these items, which are also reflected in the Hadoop installation. Specifically, 
 BiobankCloud introduces \textbf{DataSets} as a new abstraction, where a DataSet consists of a related group of directories, files, and extended metadata. DataSets can be indexed and searched (through Elasticsearch) and are the basic unit of data management in BiobankCloud; all user-generated files or directories belong to a single DataSet. In Biobanking, a sample collection would be a typical example of a DataSet.  To allow for access control of users to DataSets, which is not inherent in the DataSet concept, we introduce the notion of \textbf{Studies}. A Study is a grouping of researchers and DataSets (see Figure \ref{fig:studies}) and the basic unit of privacy protection (see below). 
 
 \begin{figure}[h]
